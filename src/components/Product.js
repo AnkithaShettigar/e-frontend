@@ -18,7 +18,7 @@ function Product(props) {
   const addToCartHandler = async (item) => {
     const existItem = cartItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
-    const { data } = await axios.get(`/api/products/${item._id}`);
+    const { data } = await axios.get(`https://busy-cyan-salmon-coat.cyclic.app/api/products/${item._id}`);
     if (data.countInStack < quantity) {
       window.alert('Sorry,Product is Out of stock');
       return;
