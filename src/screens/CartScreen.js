@@ -19,7 +19,7 @@ export default function CartScreen() {
   } = state;
 
   const updateCartHandler = async (item, quantity) => {
-    const { data } = await axios.get(`/api/products/${item._id}`);
+    const { data } = await axios.get(`https://busy-cyan-salmon-coat.cyclic.app/api/products/${item._id}`);
     if (data.countInStack < quantity) {
       window.alert('Sorry,Product is Out of stock');
       return;
