@@ -24,7 +24,7 @@ export default function SigninScreen() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('/api/users/signin', {
+      const { data } = await axios.post('https://busy-cyan-salmon-coat.cyclic.app/api/users/signin', {
         email,
         password,
       });
