@@ -30,7 +30,7 @@ export default function SignupScreen() {
       return;
     }
     try {
-      const { data } = await axios.post('/api/users/signup', {
+      const { data } = await axios.post('https://busy-cyan-salmon-coat.cyclic.app/api/users/signup', {
         name,
         email,
         password,
